@@ -472,5 +472,92 @@
   });
 </script>
 
-</body>
+<<!-- ============================================ -->
+<!-- Sección "Sniper Bot" — pegar donde quieras en tu landing -->
+<!-- ============================================ -->
+<section class="sniper-bot-section">
+  <h2>🎯 Sniper Bot de $SMILY</h2>
+  <p>
+    Código abierto para que corras tu propio sniper bot de tokens nuevos
+    en Solana, con tu propia wallet, en tu propia computadora. Nadie más
+    ve tu clave ni tus fondos.
+  </p>
+  <div class="sniper-bot-buttons">
+    <a
+      href="https://github.com/angelmerino77/solana-sniper-bot"
+      class="btn-sniper btn-sniper-primary"
+      target="_blank"
+      rel="noopener"
+    >
+      Ver código en GitHub
+    </a>
+    <a
+      href="https://github.com/angelmerino77/solana-sniper-bot/releases"
+      class="btn-sniper btn-sniper-secondary"
+      target="_blank"
+      rel="noopener"
+    >
+      Descargar (.zip)
+    </a>
+  </div>
+  <p class="sniper-bot-warning">
+    ⚠️ Usa siempre una wallet dedicada, nunca tu wallet principal. Lee el
+    README completo antes de correrlo.
+  </p>
+</section>
+
+<style>
+  .sniper-bot-section {
+    max-width: 640px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: var(--purple-card, #201C42);
+    border: 1px solid var(--line, rgba(255,246,228,0.14));
+    border-radius: 16px;
+    text-align: center;
+    color: var(--cream, #FFF6E4);
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .sniper-bot-section h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    font-family: 'Fredoka', sans-serif;
+  }
+  .sniper-bot-section p {
+    color: var(--cream, #FFF6E4);
+    opacity: 0.8;
+    line-height: 1.5;
+  }
+  .sniper-bot-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+  }
+  .btn-sniper {
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.15s ease;
+  }
+  .btn-sniper:hover {
+    transform: translateY(-2px);
+  }
+  .btn-sniper-primary {
+    background: var(--gold, #FFC93C);
+    color: var(--navy, #12142B);
+  }
+  .btn-sniper-secondary {
+    background: transparent;
+    color: var(--gold, #FFC93C);
+    border: 1px solid var(--gold, #FFC93C);
+  }
+  .sniper-bot-warning {
+    font-size: 0.85rem;
+    color: var(--coral, #FF5D6C);
+    margin-bottom: 0;
+  }
+</style>/body>
 </html>
