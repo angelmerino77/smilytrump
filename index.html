@@ -359,6 +359,12 @@
   body { top: 0 !important; }
 </style>
 <script>
+  <script>
+  // Si el visitante no eligio un idioma antes, mostrar la pagina en ingles por default.
+  if (!document.cookie.includes('googtrans')) {
+    document.cookie = 'googtrans=/es/en; path=/';
+  }
+</script>
   function googleTranslateElementInit() {
     new google.translate.TranslateElement(
       {
@@ -592,4 +598,5 @@
   }
 </style>/body>
 </html>
+
 
