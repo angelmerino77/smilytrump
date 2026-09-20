@@ -336,6 +336,22 @@
   nav {
     margin-top: 40px !important;
   }
+  /* El widget de Google Translate puede crecer mas que la barra fija de 68px
+     y montarse sobre el marquee: dejamos que la barra crezca con su contenido */
+  nav .wrap{
+    height: auto;
+    min-height: 68px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 16px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .marquee{
+    position: relative;
+    z-index: 1;
+    clear: both;
+  }
 </style>
 </head>
 <body>
@@ -349,8 +365,19 @@
     
 <div id="google_translate_element" class="lang-switcher"></div>
 <style>
-  .lang-switcher { display: inline-block; margin-left: 12px; position: relative; z-index: 60; vertical-align: middle; }
-  .goog-te-gadget { font-family: 'Space Grotesk', sans-serif !important; font-size: 0 !important; }
+  .lang-switcher { display: inline-flex; align-items: center; margin-left: 12px; position: relative; z-index: 60; vertical-align: middle; }
+  .goog-te-gadget {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center;
+  }
+  .goog-te-gadget > span,
+  .goog-te-gadget img,
+  .goog-logo-link,
+  .goog-te-gadget-icon { display: none !important; }
   .goog-te-gadget .goog-te-combo {
     background: var(--purple-card, #201C42);
     color: var(--cream, #FFF6E4);
@@ -359,9 +386,12 @@
     padding: 6px 10px;
     font-size: 0.85rem !important;
     font-family: 'Space Grotesk', sans-serif;
+    line-height: normal;
+    margin: 0 !important;
+    max-height: 34px;
   }
-  .goog-te-banner-frame { display: none !important; }
-  body { top: 0 !important; }
+  .goog-te-banner-frame, iframe.skiptranslate { display: none !important; }
+  body { top: 0 !important; position: static !important; }
 </style>
 <script>
   if (!document.cookie.includes('googtrans')) {
