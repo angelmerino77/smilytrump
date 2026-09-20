@@ -392,7 +392,11 @@
     margin: 0 !important;
     max-height: 34px;
   }
-  .goog-te-banner-frame, iframe.skiptranslate { display: none !important; }
+  /* OJO: no ocultar "iframe.skiptranslate" en general - Google marca con
+     esa misma clase tanto la barra superior como el iframe del menu de
+     idiomas; ocultarlo todo deja el icono visible pero sin lista al
+     hacer clic. Solo se oculta la barra superior de aviso. */
+  .goog-te-banner-frame { display: none !important; }
   body { top: 0 !important; position: static !important; }
 </style>
 <script>
