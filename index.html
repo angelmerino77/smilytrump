@@ -374,10 +374,12 @@
     display: inline-flex !important;
     align-items: center;
   }
-  .goog-te-gadget > span,
-  .goog-te-gadget img,
-  .goog-logo-link,
-  .goog-te-gadget-icon { display: none !important; }
+  /* El select va envuelto en un <span> igual que el bloque "Powered by
+     Google": nunca ocultar spans genericos ahi o desaparece el propio
+     selector. El texto "Powered by" ya queda invisible por el
+     font-size:0 heredado de .goog-te-gadget; solo el logo necesita
+     ocultarse explicitamente porque su tamano no depende del font-size. */
+  .goog-logo-link { display: none !important; }
   .goog-te-gadget .goog-te-combo {
     background: var(--purple-card, #201C42);
     color: var(--cream, #FFF6E4);
