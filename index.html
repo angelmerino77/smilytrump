@@ -331,6 +331,25 @@
     font-size: 0.85rem;
   }
   footer a{ text-decoration: underline; }
+
+  /* NFT BACKGROUNDS: una imagen tenue distinta detras de cada seccion */
+  .nft-bg{
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .nft-bg::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: var(--nft-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.07;
+    pointer-events: none;
+  }
 </style>
 <style id="push-banner-fix">
   nav {
@@ -444,7 +463,7 @@
   </div>
 </div>
 
-<header class="hero">
+<header class="hero nft-bg" style="--nft-bg:url('nft-bg/nft-1-bg.jpg')">
   <div class="wrap">
     <div class="hero-face">
       <img src="logo.png" alt="Smily Trump logo">
@@ -467,7 +486,7 @@
   </div>
 </header>
 
-<section id="about">
+<section id="about" class="nft-bg" style="--nft-bg:url('nft-bg/nft-2-bg.jpg')">
   <div class="wrap">
     <div class="section-tag">The story</div>
     <h2 class="section-title">A meme that refused to stay quiet</h2>
@@ -490,7 +509,7 @@
   </div>
 </section>
 
-<section id="buy">
+<section id="buy" class="nft-bg" style="--nft-bg:url('nft-bg/nft-3-bg.jpg')">
   <div class="wrap">
     <div class="section-tag">How to buy</div>
     <h2 class="section-title">Getting it into your wallet takes three steps</h2>
@@ -515,7 +534,7 @@
   </div>
 </section>
 
-<section id="links">
+<section id="links" class="nft-bg" style="--nft-bg:url('nft-bg/nft-4-bg.jpg')">
   <div class="wrap">
     <div class="links-strip">
       <h2>Join the community</h2>
@@ -530,7 +549,7 @@
   </div>
 </section>
 
-<footer>
+<footer class="nft-bg" style="--nft-bg:url('nft-bg/nft-5-bg.jpg')">
   <div class="wrap">
     $SMILY is not financial advice. Always DYOR (do your own research) before buying any token.<br>
     Contract: <span id="ca-footer">48Qr1NJybwvkeptK3kMoAoJ9bPLkoBJF7kyk4aq7BuQh</span>
@@ -549,10 +568,10 @@
   });
 </script>
 
-<<!-- ============================================ -->
+<!-- ============================================ -->
 <!-- Sección "Sniper Bot" — pegar donde quieras en tu landing -->
 <!-- ============================================ -->
-<section class="sniper-bot-section">
+<section class="sniper-bot-section nft-bg" style="--nft-bg:url('nft-bg/nft-6-bg.jpg')">
   <h2>🎯 Sniper Bot de $SMILY</h2>
   <p>
     Código abierto para que corras tu propio sniper bot de tokens nuevos
@@ -636,7 +655,8 @@
     color: var(--coral, #FF5D6C);
     margin-bottom: 0;
   }
-</style>/body>
+</style>
+</body>
 </html>
 
 
